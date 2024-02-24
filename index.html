@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Welcome</title>
+
+    <!--
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+ -->
+
+    <link rel="stylesheet" href="css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/plugins/font-awesome.css" />
+    <link rel="stylesheet" href="css/plugins/simplebar.css" />
+    <link rel="stylesheet" class="back-color" href="css/style-dark.css" />
+    <link rel="stylesheet" class="posit-nav" href="css/settings/left-nav.css" />
+    <link
+      rel="stylesheet"
+      class="theme-color"
+      href="css/settings/cyan-color.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/54d0d1c94c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+  </head>
+
+  <body onload="init()">
+    <div class="style-options">
+      <div class="toggle-btn">
+        <span><i class="fa-solid fa-gear"></i></span>
+      </div>
+      <div class="style-menu">
+        <div class="style-nav">
+          <h4 class="mt-15 mb-10">Pilih Bahasa</h4>
+          <ul>
+            <a href="id.html"><i class="icon">🇮🇩</i> INDONESIA</a>
+            <a href="index.html"><i class="icon">🇰🇷</i> KOREA</a>
+          </ul>
+        </div>
+
+        <div class="style-color">
+          <h4 class="mt-55 mb-10">Theme Color</h4>
+          <ul>
+            <li>
+              <a
+                href="css/settings/blue-color.css"
+                style="background-color: #00a3e1"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="css/settings/white-color.css"
+                style="background-color: #25ca7f"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="css/settings/red-color.css"
+                style="background-color: #d94c48"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="css/settings/purple-color.css"
+                style="background-color: #d94ce6"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="css/settings/sea-color.css"
+                style="background-color: #0dcdbd"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="css/settings/yellow-color.css"
+                style="background-color: #eae328"
+              ></a>
+            </li>
+            <li>
+              <a
+                href="css/settings/cyan-color.css"
+                style="
+                  background-color: #fff;
+                  border: 2px solid;
+                  border-color: black;
+                "
+                >Reset</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="loading">
+      <svg
+        class="loader"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 340 340"
+      >
+        <circle cx="170" cy="170" r="160" stroke="#00FFFF" />
+        <circle cx="170" cy="170" r="135" stroke="#ec70f1" />
+        <circle cx="170" cy="170" r="110" stroke="#00FFFF" />
+        <circle cx="170" cy="170" r="85" stroke="#ec70f1" />
+      </svg>
+      <div class="tunggu">PLEASE WAIT</div>
+    </div>
+
+    <!-- <div id="preloader">
+      <div class="loading-area">
+        <div class="circle"></div>
+      </div>
+    </div> -->
+
+    <div id="home">
+      <div id="about">
+        <div id="post">
+          <div class="header-mobile">
+            <a class="header-toggle"
+              ><i
+                ><div id="hamburger" class="hamburglar is-closed">
+                  <div class="burger-icon">
+                    <div class="burger-container">
+                      <span class="burger-bun-top"></span>
+                      <span class="burger-filling"></span>
+                      <span class="burger-bun-bot"></span>
+                    </div>
+                  </div>
+
+                  <!-- svg ring containter -->
+                  <div class="burger-ring">
+                    <svg class="svg-ring">
+                      <path
+                        class="path"
+                        fill="none"
+                        stroke="#00FFFF"
+                        stroke-miterlimit="10"
+                        stroke-width="2"
+                        d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"
+                      />
+                    </svg>
+                  </div>
+                  <!-- the masked path that animates the fill to the ring -->
+
+                  <svg width="0" height="0">
+                    <mask id="mask">
+                      <path
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        stroke="#ff0000"
+                        stroke-miterlimit="10"
+                        stroke-width="4"
+                        d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4"
+                      />
+                    </mask>
+                  </svg>
+                  <div class="path-burger">
+                    <div class="animate-path">
+                      <div class="path-rotation"></div>
+                    </div>
+                  </div></div></i
+            ></a>
+            <h2>MUSTOFAA<a>.com</a></h2>
+          </div>
+
+          <nav class="header-main" data-simplebar>
+            <a href="index.html"
+              ><div class="logo">
+                <div class="logo-m">
+                  <svg
+                    class="m-logo"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 701.79 591.85"
+                    style="enable-background: new 0 0 701.79 591.85"
+                    xml:space="preserve"
+                  >
+                    <style type="text/css">
+                      .st0 {
+                        fill: #c251f1;
+                      }
+                    </style>
+                    <path
+                      class="st0 move"
+                      d="M297.35,517.47l-76.41-43.94c-3.19-1.84-5.16-5.24-5.16-8.93v-78.2c0-7.9,8.53-12.86,15.39-8.95l76.41,43.5
+	c3.22,1.83,5.2,5.25,5.2,8.95v78.65C312.78,516.47,304.22,521.42,297.35,517.47z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M402.58,517.47l76.41-43.94c3.19-1.84,5.16-5.24,5.16-8.93v-78.2c0-7.9-8.53-12.86-15.39-8.95l-76.41,43.5
+	c-3.22,1.83-5.2,5.25-5.2,8.95v78.65C387.15,516.47,395.72,521.42,402.58,517.47z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M564.12,426.42l76.41-43.94c3.19-1.84,5.16-5.24,5.16-8.93v-78.21c0-7.9-8.53-12.86-15.39-8.95l-76.41,43.5
+	c-3.22,1.83-5.2,5.25-5.2,8.95v78.65C548.69,425.41,557.26,430.36,564.12,426.42z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M564.12,307.38l76.41-43.94c3.19-1.84,5.16-5.24,5.16-8.93V176.3c0-7.9-8.53-12.86-15.39-8.95l-76.41,43.5
+	c-3.22,1.83-5.2,5.25-5.2,8.95v78.65C548.69,306.37,557.26,311.32,564.12,307.38z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M564.12,188.33l76.41-43.94c3.19-1.84,5.16-5.24,5.16-8.93v-78.2c0-7.9-8.53-12.86-15.39-8.95l-76.41,43.5
+	c-3.22,1.83-5.2,5.25-5.2,8.95v78.65C548.69,187.33,557.26,192.28,564.12,188.33z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M451.08,252.95l76.41-43.94c3.19-1.84,5.16-5.24,5.16-8.93v-78.21c0-7.9-8.53-12.86-15.39-8.95l-76.41,43.5
+	c-3.22,1.83-5.2,5.25-5.2,8.95v78.65C435.65,251.94,444.22,256.9,451.08,252.95z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M421.21,184.82v78.21c0,3.69-1.97,7.09-5.16,8.93l-39.59,22.77l-26.12,15.02l-26.13-15.02l-39.59-22.77
+	c-3.2-1.84-5.17-5.24-5.17-8.93v-78.21c0-7.9,8.53-12.85,15.4-8.95l55.49,31.59l55.48-31.59
+	C412.69,171.97,421.21,176.92,421.21,184.82z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M248.85,251.55l-76.41-43.94c-3.19-1.84-5.16-5.24-5.16-8.93v-78.21c0-7.9,8.53-12.86,15.39-8.95l76.41,43.5
+	c3.22,1.83,5.2,5.25,5.2,8.95v78.65C264.28,250.54,255.71,255.49,248.85,251.55z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M137.66,187.7l-76.41-43.94c-3.19-1.84-5.16-5.24-5.16-8.93v-78.2c0-7.9,8.53-12.86,15.39-8.95l76.41,43.5
+	c3.22,1.83,5.2,5.25,5.2,8.95v78.65C153.1,186.7,144.53,191.65,137.66,187.7z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M137.66,306.74L61.25,262.8c-3.19-1.84-5.16-5.24-5.16-8.93v-78.21c0-7.9,8.53-12.86,15.39-8.95l76.41,43.5
+	c3.22,1.83,5.2,5.25,5.2,8.95v78.65C153.1,305.74,144.53,310.69,137.66,306.74z"
+                    />
+                    <path
+                      class="st0 move"
+                      d="M137.66,425.79l-76.41-43.94c-3.19-1.84-5.16-5.24-5.16-8.93v-78.21c0-7.9,8.53-12.86,15.39-8.95l76.41,43.5
+	c3.22,1.83,5.2,5.25,5.2,8.95v78.65C153.1,424.78,144.53,429.73,137.66,425.79z"
+                    />
+                  </svg>
+
+                  <svg
+                    class="mash-logo-svg"
+                    version="1.1"
+                    id="Layer_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 701.79 591.85"
+                    xml:space="preserve"
+                  >
+                    <style>
+                      .st0 {
+                        fill: #00ffff;
+                      }
+                      .st1 {
+                        fill: #d94ce6;
+                      }
+                      .st3 {
+                        display: inline;
+                        fill: #c251f1;
+                      }
+                    </style>
+                    <path
+                      class="st0"
+                      d="M484.16 343.24c0-11.36-8.05-16-17.88-10.32l-97.39 56.22c-9.84 5.68-25.96 5.73-35.83.11l-99.9-56.83c-9.87-5.62-17.95-.92-17.95 10.44v107.2c0 11.36 8.05 25.29 17.88 30.97l99.92 57.69c9.83 5.68 25.93 5.68 35.76 0l97.5-56.29c9.83-5.68 17.88-19.62 17.88-30.97V343.24z"
+                    />
+                    <path
+                      class="st1"
+                      d="M466.27 332.91l-97.39 56.22c-4.94 2.85-11.47 4.27-17.99 4.28v149.56c6.48 0 12.96-1.42 17.88-4.26l97.5-56.29c9.83-5.68 17.88-19.61 17.88-30.97V343.24c.01-11.36-8.04-16.01-17.88-10.33z"
+                    />
+                    <g>
+                      <path
+                        class="st0"
+                        d="M368.78 198.3c-9.83 5.68-25.93 5.68-35.76 0L73.97 48.74c-9.83-5.68-17.88-1.03-17.88 10.32v299.12c0 11.36 8.05 25.29 17.88 30.97l61.42 35.46c9.83 5.68 17.88 1.03 17.88-10.32V236.35c0-11.36 8.08-16.05 17.95-10.44l161.62 91.95c9.87 5.62 25.99 5.56 35.83-.11l159.55-92.11c9.83-5.68 17.88-1.03 17.88 10.32v179.72c0 11.36 8.05 16 17.88 10.32l63.84-36.86c9.83-5.68 17.88-19.62 17.88-30.97V59.07c0-11.36-8.05-16-17.88-10.32L368.78 198.3z"
+                      />
+                      <path
+                        class="st1"
+                        d="M627.82 48.74L368.78 198.3c-4.92 2.84-11.4 4.26-17.88 4.26v119.47c6.45-.04 12.89-1.46 17.77-4.28l159.55-92.11c9.83-5.68 17.88-1.03 17.88 10.32v179.72c0 11.36 8.05 16 17.88 10.32l63.84-36.86c9.83-5.68 17.88-19.61 17.88-30.97V59.07c0-11.36-8.05-16.01-17.88-10.33z"
+                      />
+                    </g>
+                  </svg>
+                </div></div
+            ></a>
+            <ul>
+              <li data-tooltip="home" data-position="top">
+                <a href="#home" class="icon-h fas fa-house-damage"></a>
+              </li>
+              <li data-tooltip="about" data-position="top">
+                <a href="#about" class="icon-a fas fa-user-tie"></a>
+              </li>
+              <li data-tooltip="post" data-position="top">
+                <a href="#post" class="fa-solid fa-receipt"></a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="pt-home">
+            <img src="" />
+            <div id="particles-js"></div>
+            <section>
+              <div class="banner">
+                <div class="container">
+                  <div class="myclock">
+                    <div class="contjam">
+                      <div class="tanggal">-</div>
+
+                      <div class="jam">-:-</div>
+                      <div class="detik">:</div>
+
+                      <div class="ucapan myoverlay">
+                        <span id="spannama2"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--<h1>안녕하세요</h1> -->
+                <div class="typed-area">
+                  <!-- typed text -->
+                  <p><span id="typed-text" style="font-size: 22px"></span></p>
+                </div>
+              </div>
+              <div class="quotes">
+                <p id="quotation"></p>
+                <p id="source"></p>
+              </div>
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com" target="_blank"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com" target="_blank"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com" target="_blank"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <div class="page pt-about" data-simplebar>
+            <section class="container">
+              <div class="header-page mt-70 mob-mt">
+                <h2>About Me</h2>
+                <span></span>
+              </div>
+
+              <div class="main-circle">
+                <div class="circle-about">
+                  <img alt src="img/default.png" />
+                </div>
+              </div>
+              <div class="main-box">
+                <div class="box-about">
+                  <h3>Muhamad Mustofa</h3>
+
+                  Hidup mandiri adalah jalan hidupku, tetap tegar menjalani
+                  walau setiap saat galau menanti. Mengisi kesibukan di bidang
+                  elektronik, sebagai hobby saja. Dari Tulungagung Jawa Timur.
+                </div>
+              </div>
+            </section>
+            <div class="main-footer">
+              <div class="isi-footer">Proudly made</div>
+              <div class="ind-footer">in <i>indonesia</i></div>
+              <div class="tahun-footer">©2023</div>
+              <div class="icon-footer">A</div>
+            </div>
+          </div>
+          <div class="page pt-post" data-simplebar>
+            <section class="container">
+              <div class="header-page mt-70 mob-mb">
+                <h2>Post</h2>
+                <span></span>
+              </div>
+              <div class="main-post">
+                <div class="foto-post"></div>
+              </div>
+              <div class="main-info">
+                <div class="info-post">
+                  <div class="user">
+                    <i class="fa-regular fa-user"></i> Admin
+                  </div>
+                  <div class="loc">
+                    <i class="fas fa-map-marked-alt"></i> Tulungagung
+                  </div>
+                  <div class="time">
+                    <i class="fa-regular fa-clock"></i> September 7, 2023
+                  </div>
+                </div>
+              </div>
+              <div class="main-isi">
+                <div class="isi-post">
+                  <i class="fa-solid fa-quote-left fa-bounce fa-xl"></i>
+                  세상의 행복은 일시적이고(무상하며), 행복감을 느끼는 것은
+                  자연스러운 일이지만, 슬픔, 감정, 상처, 행복이 파동 함수처럼
+                  진동하며 확률적으로 보이지만 사실은 결정론적입니다. 우리는
+                  인과관계에 따라 움직이는 현실의 공간에 살고 있지만 마치 특이점
+                  속에 살고 있는 것 같습니다😊
+                  <i class="fa-solid fa-quote-right fa-bounce fa-xl"></i>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/typed.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/simplebar.js"></script>
+    <script src="js/jquery.animatedheadline.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/main-demo.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script>
+      var loading = document.getElementById("loading");
+      window.addEventListener("load", function () {
+        loading.style.display = "none";
+      });
+    </script>
+
+    <script>
+      particlesJS.load("particles-js", "js/particles.json", function () {
+        console.log("callback - particles.js config loaded");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+a:hover,
+a:focus,
+.pt-home .banner p,
+.header-main ul li span.active,
+#about:target .icon-a,
+#post:target .icon-r,
+.pt-home .social ul li i:hover,
+.pt-about .info .loc,
+.info-post,
+.user,
+.loc,
+.time {
+  color: #25fa7f !important;
+}
+
+.myclock{
+  text-shadow: 0 0 20px rgba(37, 250, 127, 1), 0 0 20px rgba(10, 175, 230, 0); 
+}
+.header-main ul li a {
+  color: #25fa7f;
+}
+
+.page .header-page:after,
+.page .header-page:before {
+  background-color: #25fa7f !important;
+}
+
+.box-about,
+.isi-post {
+  border: 1px solid #25fa7f !important;
+}
+
+.page .header-page span:before,
+.page .header-page span:after {
+  border: 2px solid #25fa7f !important;
+}
+
+#preloader.loaded .loading-area .circle {
+  border-top-color: #25fa7f !important;
+}
